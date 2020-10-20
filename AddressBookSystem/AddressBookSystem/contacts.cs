@@ -30,5 +30,6 @@ namespace addBook
         public void addContact(string firstName, string lastName, string address, string city, string state, string zip, string phoneNo, string email);
         public void displayContacts();
         public void editContact(string firstName);
+        public void deleteContact(string firstName);
     }
 }

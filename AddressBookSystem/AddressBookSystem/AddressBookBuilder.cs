@@ -58,5 +58,22 @@ namespace addBook
                 Console.WriteLine("No Contacts matched with given first name");
             }
         }
+        public void deleteContact(string firstName)
+        {
+            int found = 0;
+            foreach (KeyValuePair<string, Contacts> dict in dictionary)
+            {
+                if (firstName.Equals(dict.Key))
+                {
+                    dictionary.Remove(firstName);
+                    found = 1;
+                    Console.WriteLine("Contact deleted");
+                }
+            }
+            if (found == 0)
+            {
+                Console.WriteLine("No Contacts matched with given first name");
+            }
+        }
     }
 }

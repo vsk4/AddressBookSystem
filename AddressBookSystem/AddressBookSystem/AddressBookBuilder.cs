@@ -10,27 +10,10 @@ namespace addBook
         {
             this.dictionary = new Dictionary<string, Contacts>();
         }
-        public void addContact()
+        public void addContact(string firstName, string lastName, string address, string city, string state, string zip, string phoneNo, string email)
         {
-            string FirstName, LastName, Address, City, State, Zip, PhoneNumber, Email;
-            Console.WriteLine("Enter First Name : ");
-            FirstName = Console.ReadLine();
-            Console.WriteLine("Enter Last Name : ");
-            LastName = Console.ReadLine();
-            Console.WriteLine("Enter Address: ");
-            Address = Console.ReadLine();
-            Console.WriteLine("Enter City : ");
-            City = Console.ReadLine();
-            Console.WriteLine("Enter State : ");
-            State = Console.ReadLine();
-            Console.WriteLine("Enter Zip code : ");
-            Zip = Console.ReadLine();
-            Console.WriteLine("Enter Phone Number : ");
-            PhoneNumber = Console.ReadLine();
-            Console.WriteLine("Enter Email : ");
-            Email = Console.ReadLine();
-            Contacts contact = new Contacts(FirstName, LastName, Address, City, State, Zip, PhoneNumber, Email);
-            dictionary.Add(FirstName, contact);
+            Contacts contact = new Contacts(firstName, lastName, address, city, state, zip, phoneNo, email);
+            dictionary.Add(firstName, contact);
         }
         public void displayContacts()
         {

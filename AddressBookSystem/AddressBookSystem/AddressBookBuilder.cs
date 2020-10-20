@@ -1,8 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Text;
-
-namespace AddressBookSystemProject
+namespace addBook
 {
     class AddressBookBuilder : IContacts
     {
@@ -11,24 +10,23 @@ namespace AddressBookSystemProject
         {
             this.dictionary = new Dictionary<string, Contacts>();
         }
-        public void AddContact(string FirstName, string LastName, string Address, string City, string State, string Zip, string PhoneNumber, string Email)
+        public void addContact(string firstName, string lastName, string address, string city, string state, string zip, string phoneNo, string email)
         {
-            Contacts contact = new Contacts(FirstName, LastName, Address, City, State, Zip, PhoneNumber, Email);
-            dictionary.Add(FirstName, contact);
+            Contacts contact = new Contacts(firstName, lastName, address, city, state, zip, phoneNo, email);
+            dictionary.Add(firstName, contact);
         }
-        public void DisplayContacts()
+        public void displayContacts()
         {
             foreach (KeyValuePair<string, Contacts> dict in dictionary)
             {
-                Console.WriteLine("First Name : " + dict.Value.FirstName);
-                Console.WriteLine("Last Name : " + dict.Value.LastName);
-                Console.WriteLine("Address : " + dict.Value.Address);
-                Console.WriteLine("City : " + dict.Value.City);
-                Console.WriteLine("State : " + dict.Value.State);
-                Console.WriteLine("Zip : " + dict.Value.Zip);
-                Console.WriteLine("Phone Number : " + dict.Value.PhoneNumber);
-                Console.WriteLine("Email : " + dict.Value.Email);
-                //textBox3.Text += string.Format("Key = {0}, Value = {1}", kvp.Key, kvp.Value);
+                Console.WriteLine("First Name : " + dict.Value.firstName);
+                Console.WriteLine("Last Name : " + dict.Value.lastName);
+                Console.WriteLine("Address : " + dict.Value.address);
+                Console.WriteLine("City : " + dict.Value.city);
+                Console.WriteLine("State : " + dict.Value.state);
+                Console.WriteLine("Zip : " + dict.Value.zip);
+                Console.WriteLine("Phone Number : " + dict.Value.phoneNo);
+                Console.WriteLine("Email : " + dict.Value.email);
             }
         }
     }

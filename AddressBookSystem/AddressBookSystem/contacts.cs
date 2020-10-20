@@ -1,34 +1,33 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Text;
-
-namespace AddressBookSystemProject
+namespace addBook
 {
     class Contacts
     {
-        public string FirstName;
-        public string LastName;
-        public string Address;
-        public string City;
-        public string State;
-        public string Zip;
-        public string PhoneNumber;
-        public string Email;
-        public Contacts(string FirstName, string LastName, string Address, string City, string State, string Zip, string PhoneNumber, string Email)
+        public string firstName;
+        public string lastName;
+        public string address;
+        public string city;
+        public string state;
+        public string zip;
+        public string phoneNo;
+        public string email;
+        public Contacts(string firstName, string lastName, string address, string city, string state, string zip, string phoneNo, string email)
         {
-            this.FirstName = FirstName;
-            this.LastName = LastName;
-            this.Address = Address;
-            this.City = City;
-            this.State = State;
-            this.Zip = Zip;
-            this.PhoneNumber = PhoneNumber;
-            this.Email = Email;
+            this.firstName = firstName;
+            this.lastName = lastName;
+            this.address = address;
+            this.city = city;
+            this.state = state;
+            this.zip = zip;
+            this.phoneNo = phoneNo;
+            this.email = email;
         }
     }
     public interface IContacts
     {
-        public void AddContact(string FirstName, string LastName, string Address, string City, string State, string Zip, string PhoneNumber, string Email);
-        public void DisplayContacts();
+        public void addContact(string firstName, string lastName, string address, string city, string state, string zip, string phoneNo, string email);
+        public void displayContacts();
     }
 }

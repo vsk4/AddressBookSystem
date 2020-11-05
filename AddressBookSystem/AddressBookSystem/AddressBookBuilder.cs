@@ -83,6 +83,7 @@ namespace AddressBookSystemProject
                     flag = 0;
                     contactList.Remove(contact);
                     Console.WriteLine("Successfully Deleted!");
+                    break;
                 }
             }
             if (flag == 1)
@@ -127,6 +128,20 @@ namespace AddressBookSystemProject
         {
             int numberOfPersonsFound = contactList.FindAll(e => (e.State.Equals(place))).Count;
             return numberOfPersonsFound;
+        }
+        public void sort()
+        {
+            List<string> sortList = new List<string>();
+            foreach (Contacts c in contactList)
+            {
+                string sort = c.ToString();
+                sortList.Add(sort);
+            }
+            sortList.Sort();
+            foreach (string s in sortList)
+            {
+                Console.WriteLine(s);
+            }
         }
     }
 }
